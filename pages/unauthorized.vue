@@ -1,10 +1,6 @@
 <template>
-  <div
-    class="col-12"
-  >
-    <h4
-      class="text-negative text-bold q-ma-none"
-    >
+  <div class="col-12" >
+    <h4 class="text-negative text-bold q-ma-none" >
       [ unauthorized access ]
     </h4>
     <h4

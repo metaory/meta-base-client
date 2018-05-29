@@ -9,26 +9,23 @@
         class="text-light"
       >
         <span
-          slot="subtitle">
+          slot="subtitle"
+          class="text-blue-grey-13">
           {{ profile.name }}
         </span>
         <span
+          class="text-blue-grey-14"
           @click="$router.push('/')">
           meta-x
         </span>
       </q-toolbar-title>
       <q-btn
-        v-for="(dummy, i) in ['change_history',
-                              'opacity',
-                              'bug_report',
-                              'flash_on',
-                              'filter_drama']
-        .sort(() => Math.random() - 0.5)"
+        v-for="(dummy, i) in ['change_history', 'opacity', 'bug_report', 'flash_on', 'filter_drama'].sort(() => Math.random() - 0.5)"
         :icon="dummy"
-        :color="['primary', 'secondary', 'warning', 'negative', 'positive']
-        [Math.floor(Math.random()*5)]"
+        :color="$route.params.id == i ? 'positive' : ['primary', 'secondary', 'warning', 'negative', 'positive'][Math.floor(Math.random()*5)]"
         :key="dummy"
         flat
+        dense
         round
         @click="$router.push(`/dummy/${i}`)"/>
       <q-btn
@@ -61,6 +58,7 @@ export default {
   },
   mounted() {
     console.log('MOUNTED', this.profile)
+    console.log(this.$route)
   },
   methods: {
     ...mapActions({signOut: 'auth/signOut'}),

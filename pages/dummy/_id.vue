@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-around">
-    <h3 class="text-faded uppercase"> dummy page
+    <h3 class="text-blue-grey-14 uppercase"> dummy page
       <strong class="text-positive">{{ $route.params.id }}
       </strong>
     </h3>

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h4 class="text-info text-bold q-ma-none">
+  <div class="col-12" >
+    <h4 class="text-info text-bold q-ma-none" >
       [ authenticating ... ]
     </h4>
   </div>
