@@ -25,7 +25,10 @@
 
 <script>
 /* eslint-disable */
-import { mapActions } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 // const mapAuthActions = createNamespacedHelpers('auth').mapActions
 export default {
   name: 'Unauthorized',
@@ -36,7 +39,15 @@ export default {
       timer: 9
     }
   },
+  computed: {
+    ...mapGetters({
+      isAuthenticated: 'auth/isAuthenticated'
+    })
+  },
   mounted() {
+    if (this.isAuthenticated) {
+      this.$router.push('/')
+    }
     this.startTimer()
   },
   methods: {
@@ -45,7 +56,7 @@ export default {
       this.interval = setInterval(() => {
         this.timer -= 1
         if (this.timer === 0) {
-          this.initiate()
+          // this.initiate()
         }
       }, 1000)
     },

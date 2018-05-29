@@ -22,7 +22,7 @@ export const genSecret = (length = 32) =>
     .join('')
 import cognito from '~/modules/cognito'
 export const state = ctx => ({
-  profile: null,
+  profile: {},
   appToken: null,
   accessToken: null,
   verification: null,
@@ -49,42 +49,44 @@ export const actions = {
     console.log('PAYLOAD', payload)
     console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
     // try {
-      if (payload.state === null || payload.state !== state.verification) {
-        console.log(' FAIL 1 ')
-        throw 'unauthorized'
-        // router.push({
-        //   name: 'unauthorized',
-        //   params: {
-        //     message:
-        //       'The verification state in the authentication response did not match our original request',
-        //   },
-        // })
-        // return
-      }
-      if (
-        payload.id_token === null ||
-        (jwt(payload.id_token).token_use || null) !== 'id'
-      ) {
-        console.log(' FAIL 2 ')
-        throw 'unauthorized'
-        // router.push({
-        //   name: 'unauthorized',
-        //   params: {
-        //     message:
-        //       'The authentication response did not include a valid ID token',
-        //   },
-        // })
-        // return
-      }
-      commit(SET_PROFILE, jwt(payload.id_token))
-      commit(SET_ACCESS_TOKEN, payload.access_token)
-      commit(SET_ID_TOKEN, payload.id_token)
-      commit(SET_AUTHENTICATED, true)
+    if (payload.state === null || payload.state !== state.verification) {
+      console.log(' FAIL 1 ')
+      throw 'unauthorized'
+      // router.push({
+      //   name: 'unauthorized',
+      //   params: {
+      //     message:
+      //       'The verification state in the authentication response did not match our original request',
+      //   },
+      // })
+      // return
+    }
+    if (
+      payload.id_token === null ||
+      (jwt(payload.id_token).token_use || null) !== 'id'
+    ) {
+      console.log(' FAIL 2 ')
+      throw 'unauthorized'
+      // router.push({
+      //   name: 'unauthorized',
+      //   params: {
+      //     message:
+      //       'The authentication response did not include a valid ID token',
+      //   },
+      // })
+      // return
+    }
+    commit(SET_PROFILE, jwt(payload.id_token))
+    commit(SET_ACCESS_TOKEN, payload.access_token)
+    commit(SET_ID_TOKEN, payload.id_token)
+    commit(SET_AUTHENTICATED, true)
     // } catch (err) {
     //   console.log('CATCH', err)
     // }
   },
   signOut({ dispatch }) {
+    console.log('SIGNOUT')
+    // LocalStorage.clear()
     dispatch('reset')
     // router.push({ name: 'unauthorized' })
   },
@@ -113,7 +115,7 @@ export const mutations = {
     state.isAuthenticated = isAuthenticated
   },
   [RESET](state) {
-    LocalStorage.clear()
+    // LocalStorage.clear()
     state.isAuthenticated = false
   },
 }
