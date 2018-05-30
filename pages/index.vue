@@ -3,18 +3,15 @@
     <!-- <app-logo/> -->
     <h3 class="text-blue-grey-14 uppercase"> home </h3>
     <no-ssr>
-      <product-list/>
     </no-ssr>
   </div>
 </template>
 
 <script>
 /*eslint-disable*/
-import ProductList from '~/components/ProductList'
 
 export default {
   name: 'Home',
-  components: { ProductList },
 }
 
 </script>

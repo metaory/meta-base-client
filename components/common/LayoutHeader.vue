@@ -20,7 +20,7 @@
         <span
           class="text-blue-grey-14"
           @click="$router.push('/')">
-          CTB-CMS
+          META-BASE
         </span>
       </q-toolbar-title>
       <q-btn
