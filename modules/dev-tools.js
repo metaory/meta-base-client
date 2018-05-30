@@ -5,7 +5,7 @@ const { log } = console
 
 module.exports = async function(moduleOptions) {
   this.extendBuild(config => {
-    console.log('CONFIG', config)
+    // console.log('CONFIG', config)
   if (!process.isDev) config.plugins.push(new BundleAnalyzerPlugin())
   // if (process.isDev && process.isClient) config.entry.vendor.push('tota11y/build/tota11y.min')
   })

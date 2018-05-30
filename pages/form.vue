@@ -1,20 +1,20 @@
 <template>
   <div class="q-pa-md">
     <!-- <app-logo/> -->
-    <h3 class="text-blue-grey-14 uppercase"> home </h3>
+    <h4 class="text-blue uppercase"> index </h4>
     <no-ssr>
-      <product-list/>
+      <dummy-form/>
     </no-ssr>
   </div>
 </template>
 
 <script>
 /*eslint-disable*/
-import ProductList from '~/components/ProductList'
+import DummyForm from '~/components/DummyForm'
 
 export default {
-  name: 'Home',
-  components: { ProductList },
+  name: 'DummyForm',
+  components: { DummyForm },
 }
 
 </script>

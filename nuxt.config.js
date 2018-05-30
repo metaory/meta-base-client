@@ -80,6 +80,7 @@ module.exports = {
     },
   },
   plugins: [
+    { src: '~plugins/restore.js', ssr: false },
     { src: '~plugins/vee-validate.js', ssr: true },
     { src: '~plugins/vue-particles.js', ssr: false },
     { src: '~plugins/vuex-persistedstate.js', ssr: false },
@@ -106,7 +107,7 @@ module.exports = {
   //   proxy: true,
   // },
   proxy: {
-    '/api': 'http://localhost:3000',
+    '/api': 'http://localhost:3000/api/',
     // ['/dog', { target: 'https://dog.io/', pathRewrite: { '^/dog': '/api/breeds/image/random' } }]
   },
   // stylusResources: [path.resolve(__dirname, 'assets/themes/app.mat.styl')],

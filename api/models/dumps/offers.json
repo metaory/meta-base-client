@@ -1,0 +1,41 @@
+[{
+    "id": 0,
+    "product_id": 0,
+    "title": "off tit 1 xyz",
+    "subtitle": "off sub 1 xyz",
+    "description": "off dec 1 xyz",
+    "start_date": "2018-05-28 18:47:14",
+    "end_date": "2018-06-28 18:47:14",
+    "image_path": "s3/buckets/o-1.png"
+  },
+  {
+    "id": 1,
+    "product_id": 0,
+    "title": "off tit 2 xyz",
+    "subtitle": "off sub 2 xyz",
+    "description": "off dec 2 xyz",
+    "start_date": "2018-05-29 18:47:14",
+    "end_date": "2018-07-28 18:47:14",
+    "image_path": "s3/buckets/o-2.png"
+  },
+  {
+    "id": 2,
+    "product_id": 1,
+    "title": "off tit 3 xyz",
+    "subtitle": "off sub 3 xyz",
+    "description": "off dec 3 xyz",
+    "start_date": "2018-07-29 18:47:14",
+    "end_date": "2018-09-28 18:47:14",
+    "image_path": "s3/buckets/o-3.png"
+  },
+  {
+    "id": 3,
+    "product_id": 3,
+    "title": "off tit 3 xyz",
+    "subtitle": "off sub 3 xyz",
+    "description": "off dec 3 xyz",
+    "start_date": "2018-09-29 18:47:14",
+    "end_date": "2018-10-28 18:47:14",
+    "image_path": "s3/buckets/o-3.png"
+  }
+]

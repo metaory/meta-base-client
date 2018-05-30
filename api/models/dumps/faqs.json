@@ -1,0 +1,31 @@
+[{
+    "id": 0,
+    "product_id": 0,
+    "question": "que 1 xyz?",
+    "answer": "ans 1 xyz!"
+  },
+  {
+    "id": 1,
+    "product_id": 0,
+    "question": "que 2 xyz?",
+    "answer": "ans 2 xyz!"
+  },
+  {
+    "id": 2,
+    "product_id": 1,
+    "question": "que 3 xyz?",
+    "answer": "ans 3 xyz!"
+  },
+  {
+    "id": 3,
+    "product_id": 1,
+    "question": "que 4 xyz?",
+    "answer": "ans 4 xyz!"
+  },
+  {
+    "id": 4,
+    "product_id": 2,
+    "question": "que 5 xyz?",
+    "answer": "ans 5 xyz!"
+  }
+]
