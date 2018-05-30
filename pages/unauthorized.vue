@@ -52,7 +52,7 @@ export default {
       this.interval = setInterval(() => {
         this.timer -= 1
         if (this.timer === 0) {
-          // this.initiate()
+          this.initiate()
         }
       }, 1000)
     },

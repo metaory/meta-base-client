@@ -15,9 +15,4 @@ export default function({ store, route, redirect, app }) {
     redirect('/unauthorized')
   }
 
-  console.log(
-    '???',
-    ['/authenticate', '/unauthorized'].includes(route.path),
-    isAuthenticated,
-  )
 }
