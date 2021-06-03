@@ -2,20 +2,38 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
+  // parser: 'babel-eslint',
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    sourceType: 'module',
   },
-  extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential'
-  ],
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
-  // add your custom rules here
-  rules: {}
+  extends: ['google', 'eslint:recommended', 'plugin:vue/recommended'],
+  plugins: ['vue'],
+  settings: {
+    // 'import/resolver': {
+    //   webpack: {
+    //     config: {
+    //       resolve: {
+    //         alias: {
+    //           '~': __dirname,
+    //         },
+    //       },
+    //     },
+    //   },
+    // },
+  },
+  rules: {
+    'comma-dangle': 0,
+    'arrow-parens': 0,
+    'one-var': 0,
+    semi: [2, 'never'],
+    quotes: 2,
+    'space-before-function-paren': 0,
+    'generator-star-spacing': 'off',
+    'object-curly-spacing': [2, 'always'],
+    'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
+    'block-spacing': [2, 'always'],
+  },
 }

@@ -1,0 +1,21 @@
+[{
+    "id": 0,
+    "name": "Bus"
+  },
+  {
+    "id": 1,
+    "name": "Flight"
+  },
+  {
+    "id": 2,
+    "name": "Train"
+  },
+  {
+    "id": 3,
+    "name": "Hotel"
+  },
+  {
+    "id": 4,
+    "name": "MobileReload"
+  }
+]

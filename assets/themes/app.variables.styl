@@ -12,12 +12,28 @@
 // It's highly recommended to change the default colors
 // to match your app's branding.
 
-$primary   = #027be3
-$secondary = #26A69A
-$tertiary  = #555
+$primary   = $blue-12
+$secondary = #5D5DB1
+$tertiary  = #586875
 
 $neutral   = #E0E1E2
-$positive  = #21BA45
-$negative  = #DB2828
-$info      = #31CCEC
-$warning   = #F2C037
+$positive  = #16c98d
+$negative  = $red-12
+$info      = #27dede
+$warning   = $deep-orange-12
+
+$dark               = #18262F
+$body-background    = #222E38
+$body-color         = #E8E9ED
+
+.q-icon
+  &.q-if-control
+    font-size 22px
+
+::-webkit-scrollbar
+  height: 2px
+  width: 2px
+  background-color: $dark
+
+::-webkit-scrollbar-thumb
+  background-color: $tertiary
